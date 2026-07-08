@@ -21,10 +21,9 @@ fi
 
 for i in $Package
 do
-    Packages=$i
-    echo "listing $Packages"
-    rpm -q $Packages
-    validate_function $? "$Packages"
+    echo "listing $i"
+    rpm -q $i
+    validate_function $? "$i"
 done
 
 
