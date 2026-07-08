@@ -15,6 +15,7 @@ then
     echo "$2 is fail...."
 else
     echo "$2 is success"
+fi
 }
 dnf install $Package -y
 validate_function $? "Installing $Package"
