@@ -1,6 +1,8 @@
 #!/bin/bash
 #sh 08-special-variables.sh Ramesh Suresh
+echo "all variables : $?"         # exit status of last command
 echo "all variables : $@"         # All variables
+echo "all variables : $*"  
 echo "Number of variables: $#"    #Count of variables passed
 echo "Script Name : $0"
 echo "Current Working Dir : $PWD"
