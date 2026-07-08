@@ -10,9 +10,12 @@ else
 fi
 
 validate_function(){
-    echo "Exit status $1"
-    echo "Package is $2"
+if [ $1 -ne 0 ]
+then
+    echo "$2 is fail...."
+else
+    echo "$2 is success"
 }
-
-validate_function $? "mysql"
+dnf install $Package -y
+validate_function $? "Installing $Package"
 
