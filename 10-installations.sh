@@ -8,9 +8,9 @@ then
 else
     echo "You are super user"
 fi
-dnf installmysql -y
-echo "package is instaling"
 
+echo "package is instaling"
+dnf installmysql -y
 if [ $? -ne 0 ]
 then
     echo "Instalation of mysql...failure"
