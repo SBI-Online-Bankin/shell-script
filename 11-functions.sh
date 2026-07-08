@@ -12,11 +12,12 @@ fi
 validate_function(){
 if [ $1 -ne 0 ]
 then
-    echo "$2 is fail...."
+    echo "$2 ...."
 else
-    echo "$2 is success"
+    echo "$2 is already installed"
 fi
 }
 dnf install $Package -y
+rpm -q $Package
 validate_function $? "Installing $Package"
 
