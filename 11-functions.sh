@@ -12,12 +12,16 @@ fi
 validate_function(){
 if [ $1 -ne 0 ]
 then
-    echo "$2 ...."
+    echo "Installing $2 ...."
 else
     echo "$2 is already installed"
 fi
 }
-dnf install $Package -y
-rpm -q $Package
-validate_function $? "Installing $Package"
+
+for i in $Package
+do
+    Packages=$1
+done
+rpm -q $Packages
+validate_function $? "$Packages"
 
