@@ -23,7 +23,8 @@ for i in $Package
 do
     Packages=$i
     echo "listing $Packages"
+    rpm -q $Packages
+    validate_function $? "$Packages"
 done
-rpm -q $Packages
-validate_function $? "$Packages"
+
 
